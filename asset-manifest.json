@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/hamro-ghar/static/css/main.dd29eef2.css",
-    "main.js": "/hamro-ghar/static/js/main.bb26dddc.js",
+    "main.js": "/hamro-ghar/static/js/main.f28d1111.js",
     "static/js/787.3e4bc9e0.chunk.js": "/hamro-ghar/static/js/787.3e4bc9e0.chunk.js",
     "index.html": "/hamro-ghar/index.html",
     "main.dd29eef2.css.map": "/hamro-ghar/static/css/main.dd29eef2.css.map",
-    "main.bb26dddc.js.map": "/hamro-ghar/static/js/main.bb26dddc.js.map",
+    "main.f28d1111.js.map": "/hamro-ghar/static/js/main.f28d1111.js.map",
     "787.3e4bc9e0.chunk.js.map": "/hamro-ghar/static/js/787.3e4bc9e0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dd29eef2.css",
-    "static/js/main.bb26dddc.js"
+    "static/js/main.f28d1111.js"
   ]
 }
