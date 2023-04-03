@@ -20,7 +20,7 @@ const FilteredOrders = () => {
             {orders && orders.filter((data) => data.paid == paidOrder && data.fulfilled == fulfilledOrder).sort((a,b) => a.name > b.name ? 1:-1).map((order) => (
                 <div className={`order-preview ${order.fulfilled ? "fulfilled-order" : ""} ${order.paid ? "paid-order" : ""}`} key={order.id}>
                     <div className="order-content">
-                        <Link to={`/hamro-ghar/orders/${order.id}`}>
+                        <Link to={`/orders/${order.id}`}>
                             <h2>{order.name}</h2>
                             <p>Address: { order.address }</p>
                             <hr />

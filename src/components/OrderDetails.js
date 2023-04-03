@@ -42,7 +42,7 @@ const OrderDetails = () => {
                     </div>
                     <div className = "order-btn-block">
                         <div className="edit-order-btn">
-                            <Link to={`/hamro-ghar/edit/${orderDetails.id}`}>
+                            <Link to={`/edit/${orderDetails.id}`}>
                                 Edit
                             </Link>
                         </div>

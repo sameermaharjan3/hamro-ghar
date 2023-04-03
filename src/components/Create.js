@@ -34,7 +34,7 @@ const Create = () => {
         })
         .then(() => {
             setIsPending(false);
-            history.push('/hamro-ghar/');
+            history.push('/');
         });
     }
 
