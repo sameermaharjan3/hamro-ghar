@@ -4,7 +4,7 @@ import { useState } from "react";
 import useFetch from "./useFetch";
 
 const FilteredOrders = () => {
-    const {data: orders, isPending, error} = useFetch('/orders');
+    const {data: orders, isPending, error} = useFetch('https://sameermaharjan3.github.io/hamro-ghar-db/orders/');
     const location = useLocation();
     const queryParameters = new URLSearchParams(location.search);
     const paidOrder = queryParameters.get("paid") === "true"?true:false;

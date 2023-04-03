@@ -4,7 +4,7 @@ import useFetch from './useFetch';
 
 const EditOrder = () => {
     const {id} = useParams();
-    const {data: orderDetails, isPending: orderDataPending, error} = useFetch('/orders/' + id);
+    const {data: orderDetails, isPending: orderDataPending, error} = useFetch('https://sameermaharjan3.github.io/hamro-ghar-db/orders/' + id);
 
     const [name, setName] = useState('');
     const [address, setAddress] = useState('');
@@ -40,7 +40,7 @@ const EditOrder = () => {
                     fulfilled};
         setIsPending(true);
         
-        fetch('/orders/' + id, {
+        fetch('https://sameermaharjan3.github.io/hamro-ghar-db/orders/' + id, {
             method: "PUT",
             body: JSON.stringify(order),
             headers: {"Content-Type":"application/json"},

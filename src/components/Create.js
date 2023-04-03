@@ -27,7 +27,7 @@ const Create = () => {
         };
         setIsPending(true);
         
-        fetch('/orders/', {
+        fetch('https://sameermaharjan3.github.io/hamro-ghar-db/orders/', {
             method: "POST",
             body: JSON.stringify(order),
             headers: {"Content-Type":"application/json"},
