@@ -4,7 +4,7 @@ import useFetch from './useFetch';
 
 const EditOrder = () => {
     const {id} = useParams();
-    const {data: orderDetails, isPending: orderDataPending, error} = useFetch('http://localhost:8000/orders/' + id);
+    const {data: orderDetails, isPending: orderDataPending, error} = useFetch('/orders/' + id);
 
     const [name, setName] = useState('');
     const [address, setAddress] = useState('');
@@ -40,7 +40,7 @@ const EditOrder = () => {
                     fulfilled};
         setIsPending(true);
         
-        fetch('http://localhost:8000/orders/' + id, {
+        fetch('/orders/' + id, {
             method: "PUT",
             body: JSON.stringify(order),
             headers: {"Content-Type":"application/json"},

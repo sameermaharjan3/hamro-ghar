@@ -3,11 +3,11 @@ import useFetch from './useFetch';
 
 const OrderDetails = () => {
     const {id} = useParams();
-    const {data: orderDetails, isPending, error} = useFetch('http://localhost:8000/orders/' + id);
+    const {data: orderDetails, isPending, error} = useFetch('/orders/' + id);
     const history = useHistory();
 
     const handleClick = () => {
-        fetch('http://localhost:8000/orders/' + orderDetails.id,{
+        fetch('/orders/' + orderDetails.id,{
             method:'DELETE'
         }).then(() => {
             history.push('/');

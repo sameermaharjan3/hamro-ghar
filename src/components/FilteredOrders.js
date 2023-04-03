@@ -4,7 +4,7 @@ import { useState } from "react";
 import useFetch from "./useFetch";
 
 const FilteredOrders = () => {
-    const {data: orders, isPending, error} = useFetch('http://localhost:8000/orders');
+    const {data: orders, isPending, error} = useFetch('/orders');
     const location = useLocation();
     const queryParameters = new URLSearchParams(location.search);
     const paidOrder = queryParameters.get("paid") === "true"?true:false;
