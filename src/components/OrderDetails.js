@@ -3,11 +3,11 @@ import useFetch from './useFetch';
 
 const OrderDetails = () => {
     const {id} = useParams();
-    const {data: orderDetails, isPending, error} = useFetch('https://sameermaharjan3.github.io/hamro-ghar-db/orders/' + id);
+    const {data: orderDetails, isPending, error} = useFetch('/data/orders/' + id);
     const history = useHistory();
 
     const handleClick = () => {
-        fetch('https://sameermaharjan3.github.io/hamro-ghar-db/orders/' + orderDetails.id,{
+        fetch('/data/orders/' + orderDetails.id,{
             method:'DELETE'
         }).then(() => {
             history.push('/');
