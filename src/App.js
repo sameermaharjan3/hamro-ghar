@@ -18,19 +18,19 @@ function App() {
         </div>
         <div className = "content">
           <Switch>
-            <Route exact path="/hamro-ghar/">
+            <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/hamro-ghar/orders/filter">
+            <Route path="/orders/filter">
               <FilteredOrders />
             </Route>
-            <Route path="/hamro-ghar/create">
+            <Route path="/create">
               <Create />
             </Route>
-            <Route path="/hamro-ghar/edit/:id">
+            <Route path="/edit/:id">
               <EditOrder />
             </Route>
-            <Route path="/hamro-ghar/orders/:id">
+            <Route path="/orders/:id">
               <OrderDetails />
             </Route>
             <Route path="*">
