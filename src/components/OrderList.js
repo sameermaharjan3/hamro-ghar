@@ -16,7 +16,7 @@ const OrderList = ({orders,paidFilter,fulfilledFilter}) => {
 
     return(
         <div className="order-list">
-            {filteredOrder.sort((a,b) => a.paid > b.paid ? 1:-1).map((order) => (
+            {filteredOrder.orders.sort((a,b) => a.paid > b.paid ? 1:-1).map((order) => (
                 <div className={`order-preview ${order.fulfilled ? "fulfilled-order" : ""} ${order.paid ? "paid-order" : ""}`} key={order.id}>
                     <div className="order-content">
                         <Link to={`/orders/${order.id}`}>
