@@ -6,7 +6,7 @@ import FilterOptions from './FilterOptions';
 
 const Home = () =>{
 
-    const {data: orders, isPending, error} = useFetch('https://sameermaharjan3.github.io/hamro-ghar-db/orders/');
+    const {data: orders, isPending, error} = useFetch('https://sameermaharjan3.github.io/hamro-ghar-db/orders');
     
     return(
         <div className="home">
