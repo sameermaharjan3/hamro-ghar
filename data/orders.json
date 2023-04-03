@@ -1,0 +1,80 @@
+{
+  "orders": [
+    {
+      "name": "Bernado Silva",
+      "address": "Portugal",
+      "phone": "9141239984",
+      "items": [
+        {
+          "itemName": "Momo",
+          "quantity": 2
+        },
+        {
+          "itemName": "Biryani",
+          "quantity": 2
+        },
+        {
+          "itemName": "Chicken Curry",
+          "quantity": 1
+        }
+      ],
+      "specialReq": "normal",
+      "paid": false,
+      "fulfilled": false,
+      "id": 1
+    },
+    {
+      "name": "Stephen Curry",
+      "address": "USA",
+      "phone": "9143695611",
+      "items": [
+        {
+          "itemName": "Taco",
+          "quantity": 1
+        },
+        {
+          "itemName": "Biryani",
+          "quantity": 2
+        }
+      ],
+      "specialReq": "normal",
+      "paid": true,
+      "fulfilled": false,
+      "id": 2
+    },
+    {
+      "name": "Daniel Bryan",
+      "address": "United States",
+      "phone": "8972340052",
+      "items": [
+        {
+          "itemName": "Chicken Curry",
+          "quantity": 2
+        }
+      ],
+      "specialReq": "no spicy",
+      "paid": true,
+      "fulfilled": false,
+      "id": 4
+    },
+    {
+      "name": "Dwayne Johnson",
+      "address": "United States",
+      "phone": "2309123387",
+      "items": [
+        {
+          "itemName": "Momo",
+          "quantity": 2
+        },
+        {
+          "itemName": "Chow Mein",
+          "quantity": 1
+        }
+      ],
+      "specialReq": "normal",
+      "paid": true,
+      "fulfilled": true,
+      "id": 5
+    }
+  ]
+}

@@ -1,13 +1,341 @@
-body {
+/* base styles */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-color: #eeeeee;
+}
+
+h1,h2,h3,h4,h5{
+  text-transform: uppercase;
+}
+
+.app-container{
+  background-color: #eeeeee;
+}
+
+.navbar-container{
+  background-color: #20232A;
+}
+
+.navbar {
+  max-width: 600px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  color: #ffffff;
+}
+.navbar h1 {
+  color: #61DAFB;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  color: #ffffff;
+}
+.navbar a:hover {
+  color: #61DAFB;
+}
+.content {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.order-content hr, .order-details-content hr {
+  border: 0;
+  height: 1px;
+  margin: 10px 0;
+  background: #61DAFB;
+  background-image: linear-gradient(to right, #f5fdff, #61DAFB, #f5fdff);
+}
+
+.order-preview{
+  margin:20px auto;
+  padding: 20px;
+  display: block;
+  background-color:#ffffff;
+  box-shadow: 3px 1px 5px #ccc;
+}
+
+.order-preview:hover{
+  box-shadow: 5px 5px 25px #ccc;
+  cursor: pointer;
+}
+
+.paid-order{
+  background-color: #f7f7f7;
+  box-shadow: 3px 1px 5px #61DAFB;
+}
+
+.paid-order:hover{
+  box-shadow: 5px 5px 25px #61DAFB;
+}
+
+.fulfilled-order{
+  background-color: #adadad;
+}
+
+.order-preview a{
+  text-decoration: none;
+}
+
+.order-preview h2{
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.order-preview p{
+  margin: 10px auto;
+}
+
+.order-preview button{
+  background-color: #61DAFB ;
+  color:#20232A;
+  border:0px;
+  padding: 10px 20px;
+}
+
+.order-preview button:hover{
+  cursor: pointer;
+  background-color: rgb(173, 43, 43);
+  transition: 0.3s;
+  color:#ffffff;
+}
+
+.order-details-content{
+  padding: 40px 0;
+}
+
+.order-details-content p{
+  padding-top:5px;
+}
+
+.order-description{
+  text-align: center;
+}
+
+.order-details-frame{
+  background-color: #fff;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 1px 1px 10px #61DAFB;
+}
+
+.order-details-frame h1{
+  text-align: center;
+  color: #61DAFB;
+}
+
+.create-order-btn{
+  background-color: #61DAFB ;
+  color:#20232A;
+  border:0px;
+  display: block;
+  padding: 10px 20px;
+  margin: 40px auto;
+}
+
+.create-order-btn:hover{
+  cursor: pointer;
+  background-color: #0c743b;
+  transition: 0.3s;
+  color:#ffffff;
+}
+
+.create h3{
+  text-align: center;
+  padding-bottom:15px;
+}
+
+.create label{
+  display: block;
+}
+
+.create input, .create textarea{
+  box-sizing: border-box;
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.item-details{
+  margin: 20px 0;
+}
+
+.item-details :is(h1,h2,h3,h4,h5){
+  margin-bottom: 10px;
+}
+
+.select-item-container{
+ padding: 10px 0;
+ display: flex;
+}
+
+.select-item{
+  float: left;
+}
+
+.item-quantity{
+  float: left;
+  margin-left: 10px;
+}
+
+.create .item-quantity input{
+  width: 40px;
+  margin: 0 5px;
+  display: inline;
+}
+
+.home-page-lnk{
+  text-decoration: none;
+  margin: 20px auto;
+}
+
+.not-found-page{
+  text-align: center;
+}
+
+.home-page-lnk a{
+  color:#61DAFB ;
+}
+
+.home-page-lnk a:hover{
+  text-decoration: none;
+}
+
+.delete-order-btn button{
+  background-color: #61DAFB;
+  color: #20232A;
+  float: right;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  transition: 0.3s;
+  justify-content: center;
+}
+
+.delete-order-btn button:hover{
+  cursor: pointer;
+  background-color: #921616;
+  color: #ffffff;;
+}
+
+.edit-order-btn{
+  float:left;
+}
+
+.edit-order-btn a{
+  background-color: #61DAFB;
+  color: #20232A;
+  display: block;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  text-decoration: none;
+  transition: 0.3s;
+  justify-content: center;
+}
+
+.edit-order-btn a:hover{
+  cursor: pointer;
+  background-color: #0c743b;
+  color: #ffffff;;
+}
+
+.order-btn-block{
+  padding-bottom: 50px;
+}
+
+.delete-item-btn{
+  float:left;
+  margin-left: auto;
+}
+
+.add-item-btn{
+  display: block;
+  width: 100%;
+  float: left;
+  margin: 10px auto 20px;
+}
+
+.delete-item-btn button, .add-item-btn button{
+  background-color: #606572;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.add-item-btn button:hover{
+  cursor: pointer;
+  background-color: #61DAFB;
+  color: #20232A;
+}
+
+.delete-item-btn button:hover{
+  cursor: pointer;
+  background-color: #921616;
+  color: #ffffff;
+}
+
+input[type=text], textarea{
+  width: 100%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.order-status-block input[type="checkbox"] {
+  background-color: #fff;
+  margin: 3px 5px;
+  width: 1.15em;
+  height: 1.15em;
+  border-radius: 0.15em;
+}
+.order-status-block label{
+  float: left;
+  display: flex;
+}
+
+.order-status-block{
+  display: block;
+  float: right;
+}
+
+.checkbox-block{
+  display:flex;
+}
+
+.filter-radio-btn{
+  margin-top:15px;
+}
+
+.filter-radio-btn h5{
+  margin-bottom: 5px;
+}
+
+.filter-radio-btn span{
+  padding-left:5px;
+}
+
+.filter-radio-btn label{
+  margin-right: 10px;
+}
+
+.home h1, .order-list h1{
+  text-align: center;
 }
