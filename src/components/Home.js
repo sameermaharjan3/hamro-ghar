@@ -6,7 +6,7 @@ import FilterOptions from './FilterOptions';
 
 const Home = () =>{
 
-    const {data: orders, isPending, error} = useFetch('/data/orders.json');
+    const {data: orders, isPending, error} = useFetch('/data/orders');
     
     return(
         <div className="home">
