@@ -6,7 +6,7 @@ import OrderDetails from './components/OrderDetails';
 import EditOrder from './components/EditOrder';
 import FilteredOrders from './components/FilteredOrders';
 import NotFound from './components/NotFound';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
 
