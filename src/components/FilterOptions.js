@@ -8,21 +8,21 @@ const FilterOptions = ({filterValue}) => {
 
     const handleNone = (e) => {
         if(e.target.checked){
-            history.push('/');
+            history.push('/hamro-ghar/');
             setFilter("none");
         }
     }
 
     const handleUnpaid = (e) => {
         if(e.target.checked){
-            history.push('/orders/filter?unpaid=true');
+            history.push('/hamro-ghar/orders/filter?unpaid=true');
             setFilter("unpaid");
         }
     }
 
     const handlePaid = (e) => {
         if(e.target.checked){
-            history.push('/orders/filter?paid=true');
+            history.push('/hamro-ghar/orders/filter?paid=true');
             setFilter("paid");
         }
         
@@ -30,7 +30,7 @@ const FilterOptions = ({filterValue}) => {
 
     const handleFulfilled = (e) => {
         if(e.target.checked){
-            history.push('/orders/filter?fulfilled=true&paid=true');
+            history.push('/hamro-ghar/orders/filter?fulfilled=true&paid=true');
             setFilter("fulfilled");
         }        
     }

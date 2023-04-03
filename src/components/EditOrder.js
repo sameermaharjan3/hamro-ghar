@@ -47,7 +47,7 @@ const EditOrder = () => {
         })
         .then(() => {
             setIsPending(false);
-            history.push('/orders/' + id);
+            history.push('/hamro-ghar/orders/' + id);
         });
     }
 
