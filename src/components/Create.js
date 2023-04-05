@@ -34,7 +34,7 @@ const Create = () => {
         })
         .then(() => {
             setIsPending(false);
-            navigate('/');
+            navigate('/hamro-ghar/');
         });
     }
 
