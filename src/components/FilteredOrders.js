@@ -1,10 +1,9 @@
-import { useParams, useLocation, Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import FilterOptions from "./FilterOptions";
-import { useState } from "react";
 import useFetch from "./useFetch";
 
 const FilteredOrders = () => {
-    const {data: orders, isPending, error} = useFetch('/data/orders.json');
+    const {data: orders, isPending, error} = useFetch('https://hamro-ghar.onrender.com/orders');
     const location = useLocation();
     const queryParameters = new URLSearchParams(location.search);
     const paidOrder = queryParameters.get("paid") === "true"?true:false;

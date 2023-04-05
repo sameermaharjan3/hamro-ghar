@@ -6,7 +6,7 @@ import OrderDetails from './components/OrderDetails';
 import EditOrder from './components/EditOrder';
 import FilteredOrders from './components/FilteredOrders';
 import NotFound from './components/NotFound';
-import {HashRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 function App() {
 
@@ -17,26 +17,14 @@ function App() {
           <Navbar />
         </div>
         <div className = "content">
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/orders/filter">
-              <FilteredOrders />
-            </Route>
-            <Route path="/create">
-              <Create />
-            </Route>
-            <Route path="/edit/:id">
-              <EditOrder />
-            </Route>
-            <Route path="/orders/:id">
-              <OrderDetails />
-            </Route>
-            <Route path="*">
-              <NotFound />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/orders/filter" element={<FilteredOrders />} />
+            <Route path="/create" element={<Create />} />
+            <Route path="/edit/:id" element={<EditOrder />} />
+            <Route path="/orders/:id" element={<OrderDetails />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
         </div>
       </div>
     </Router>

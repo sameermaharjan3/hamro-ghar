@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Create = () => {
     const [name, setName] = useState('');
@@ -10,7 +10,7 @@ const Create = () => {
     const [paid, setPaid] = useState(false);
     const [fulfilled, setFulfilled] = useState(false);
     const [isPending, setIsPending] = useState(false);
-    const history = useHistory();
+    const navigate = useNavigate();
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -27,21 +27,20 @@ const Create = () => {
         };
         setIsPending(true);
         
-        fetch('/data/orders/', {
+        fetch('https://hamro-ghar.onrender.com/orders/', {
             method: "POST",
             body: JSON.stringify(order),
             headers: {"Content-Type":"application/json"},
         })
         .then(() => {
             setIsPending(false);
-            history.push('/');
+            navigate('/');
         });
     }
 
     const handleAddItem = () => {
         const itemList = [...items,{itemName:'Biryani',quantity:1}];
         setItems(itemList);
-        console.log(itemList);
     }
 
     const handleDeleteItem = (index) => {
@@ -54,7 +53,6 @@ const Create = () => {
         const itemList = [...items];
         itemList[index][type] = value;
         setItems(itemList);
-        console.log(itemList);
     }
 
     const handleIsPaid = (e) => {
@@ -110,7 +108,7 @@ const Create = () => {
                                     <option value="Chicken Curry">Chicken Curry</option>
                                     <option value="Chow Mein">Chow Mein</option>
                                     <option value="Momo">Momo</option>
-                                    <option value="Taco">Taco</option>                            
+                                    <option value="Thali">Thali</option>                            
                                 </select>
                             </div>
                             <div className = "item-quantity">

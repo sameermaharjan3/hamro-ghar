@@ -29,7 +29,7 @@
       "phone": "9143695611",
       "items": [
         {
-          "itemName": "Taco",
+          "itemName": "Thali",
           "quantity": 1
         },
         {
@@ -39,7 +39,7 @@
       ],
       "specialReq": "normal",
       "paid": true,
-      "fulfilled": false,
+      "fulfilled": true,
       "id": 2
     },
     {

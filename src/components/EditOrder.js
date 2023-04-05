@@ -1,10 +1,10 @@
-import { useHistory, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import useFetch from './useFetch';
 
 const EditOrder = () => {
     const {id} = useParams();
-    const {data: orderDetails, isPending: orderDataPending, error} = useFetch('/data/orders/' + id);
+    const {data: orderDetails, isPending: orderDataPending, error} = useFetch('https://hamro-ghar.onrender.com/orders/' + id);
 
     const [name, setName] = useState('');
     const [address, setAddress] = useState('');
@@ -14,7 +14,7 @@ const EditOrder = () => {
     const [paid, setPaid] = useState(false);
     const [fulfilled, setFulfilled] = useState(false);
     const [isPending, setIsPending] = useState(true);
-    const history = useHistory();
+    const navigate = useNavigate();
 
     setTimeout(() => {
         if(!orderDataPending && isPending){
@@ -40,28 +40,26 @@ const EditOrder = () => {
                     fulfilled};
         setIsPending(true);
         
-        fetch('/data/orders/' + id, {
+        fetch('https://hamro-ghar.onrender.com/orders/' + id, {
             method: "PUT",
             body: JSON.stringify(order),
             headers: {"Content-Type":"application/json"},
         })
         .then(() => {
             setIsPending(false);
-            history.push('/orders/' + id);
+            navigate('/orders/' + id);
         });
     }
 
     const handleAddItem = () => {
         const itemList = [...items,{itemName:'Biryani',quantity:''}];
         setItems(itemList);
-        console.log(itemList);
     }
 
     const handleItemChange = (value, type, index) => {
         const itemList = [...items];
         itemList[index][type] = value;
         setItems(itemList);
-        console.log(itemList);
     }
 
     const handleDeleteItem = (index) => {
@@ -126,7 +124,7 @@ const EditOrder = () => {
                                         <option value="Chicken Curry">Chicken Curry</option>
                                         <option value="Chow Mein">Chow Mein</option>
                                         <option value="Momo">Momo</option>
-                                        <option value="Taco">Taco</option>                            
+                                        <option value="Thali">Thali</option>                            
                                     </select>
                                 </div>
                                 <div className = "item-quantity"><span>Quantity : </span><input type ="number"

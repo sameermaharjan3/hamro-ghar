@@ -1,12 +1,10 @@
-import {useState, useEffect} from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
 import OrderList from './OrderList';
 import useFetch from './useFetch';
 import FilterOptions from './FilterOptions';
 
 const Home = () =>{
 
-    const {data: orders, isPending, error} = useFetch('/data/orders');
+    const {data: orders, isPending, error} = useFetch('https://hamro-ghar.onrender.com/orders');
     
     return(
         <div className="home">

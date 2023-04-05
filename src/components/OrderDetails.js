@@ -1,16 +1,16 @@
-import { useHistory, useParams, Link } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import useFetch from './useFetch';
 
 const OrderDetails = () => {
     const {id} = useParams();
-    const {data: orderDetails, isPending, error} = useFetch('/data/orders/' + id);
-    const history = useHistory();
+    const {data: orderDetails, isPending, error} = useFetch('https://hamro-ghar.onrender.com/orders/' + id);
+    const navigate = useNavigate();
 
     const handleClick = () => {
-        fetch('/data/orders/' + orderDetails.id,{
+        fetch('https://hamro-ghar.onrender.com/orders/' + orderDetails.id,{
             method:'DELETE'
         }).then(() => {
-            history.push('/');
+            navigate('/');
         })
     }
 

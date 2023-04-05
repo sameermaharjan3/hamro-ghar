@@ -1,28 +1,28 @@
-import { useHistory, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
 const FilterOptions = ({filterValue}) => {
 
-    const history = useHistory();
+    const navigate = useNavigate();
     const [filter, setFilter] = useState(filterValue);
 
     const handleNone = (e) => {
         if(e.target.checked){
-            history.push('/');
+            navigate('/');
             setFilter("none");
         }
     }
 
     const handleUnpaid = (e) => {
         if(e.target.checked){
-            history.push('/orders/filter?unpaid=true');
+            navigate('/orders/filter?unpaid=true');
             setFilter("unpaid");
         }
     }
 
     const handlePaid = (e) => {
         if(e.target.checked){
-            history.push('/orders/filter?paid=true');
+            navigate('/orders/filter?paid=true');
             setFilter("paid");
         }
         
@@ -30,7 +30,7 @@ const FilterOptions = ({filterValue}) => {
 
     const handleFulfilled = (e) => {
         if(e.target.checked){
-            history.push('/orders/filter?fulfilled=true&paid=true');
+            navigate('/orders/filter?fulfilled=true&paid=true');
             setFilter("fulfilled");
         }        
     }
